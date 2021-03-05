@@ -1,7 +1,90 @@
 .html, body{
  margin: 0;
+ background-color: #30475e;
+ font-family: 'Rubik', sans-serif;
 }
 
 .container{
     
+    width: 400px;
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: rgba(255, 255, 255, .15);  
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.circle{
+    background-color: #f05454;
+    
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 25%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+h1{
+    text-align: center;
+    color: #dddddd;
+}
+
+p{
+    text-align: center;
+    color: #dddddd;
+}
+
+img{
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.social-icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icons a{
+    font-size: 2rem;
+    margin-right: 20px;
+    padding-top: 25px;
+}
+
+.social-icons a:hover{
+    color: #222831;
+    transition: all 0.1s;
+}
+
+.fa{
+    color: #dddddd;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .container{
+        width: 300px;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .container{
+        width: 200px;
+
+    }
 }
