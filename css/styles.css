@@ -1,51 +1,96 @@
 .html, body{
- margin: 0;
- background-color: #222831;
- /* font-family: 'Rubik', sans-serif; */
- font-family: 'Cairo', sans-serif;
- overflow: hidden;
+    margin: 0;
+    background-color: #222831;
+    /* font-family: 'Rubik', sans-serif; */
+    font-family: 'Cairo', sans-serif;
+    overflow: hidden;
 }
 
 .hamburger { 
     position: fixed;
-    top: 0;
-    right: 0;
-    width: 3rem;
+    top: 3rem;
+    right: 1.5rem;
+    width: 2.5rem;
     height: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     cursor: pointer;
-    z-index: 5;
+
+    z-index: 1500;
  }
 
-.line { 
-    position: absolute; 
-    left: 700px;
-    height: 2px; 
-    width: 40px; 
-    background: #dddddd; 
-    border-radius: 2px;
-    display: block; 
-    transition: 0.5s; 
-    transform-origin: center; 
+.hamburger .line { 
+    height: 3px; 
+    width: 100%; 
+    background: #fff; 
+    border-radius: 5px;
+    transform: rotate(0deg) translateY(0px);
+    transition: all 0.3s;
  }
 
- .line:nth-child(1) { top: 12px; }
- .line:nth-child(2) { top: 24px; }
- .line:nth-child(3) { top: 36px; }
+.open .line:nth-child(1){
+    transform: rotate(135deg) translateY(12px);
+    transition: all 0.5s;
+}
+
+.open .line:nth-child(2){
+    opacity: 0;
+}
+
+.open .line:nth-child(3){
+    transform: rotate(-135deg) translateY(-12px);
+    transition: all 0.5s;
+}
+
+/* .line:nth-child(1) { top: 36px; }
+.line:nth-child(2) { top: 48px; }
+.line:nth-child(3) { top: 60px; } */
+
+.menu-container{
+    position: absolute;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    top: -10000px;
+    transition: all 0.3s;
+
+    transform: translateY(0px);
+
+    z-index: 3;
+}
+
+.menu{
+    list-style: none;
+}
+
+.menu-item a{
+    text-decoration: none;
+    font-size: 3rem;
+    color: #dddddd;
+}
+
+.menu-item a:hover{
+    color: #f05454;
+    transition: all 0.3s;
+}
+
+.active{
+    transform: translateY(10000px);
+}
+
 
 .container{
-    
     width: 400px;
-    
     position: absolute;
     top: 50vh;
     margin-left: 50%;
     margin-right: 50%;
     padding-top: 50px;
     padding-bottom: 50px;
-
     transform: translate(-50%, -50%);
     z-index: 2;
 }
@@ -94,11 +139,11 @@ img{
     text-decoration: none;
 }
 
-span{
+.container span{
     color: #f05454;
 }
 
-span:hover{
+.container span:hover{
     color: #dddddd;
     transition: all 0.3s;
 }
