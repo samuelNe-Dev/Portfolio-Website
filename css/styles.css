@@ -11,7 +11,7 @@
     top: 3rem;
     right: 1.5rem;
     width: 2.5rem;
-    height: 2rem;
+    height: 1.7rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -30,7 +30,7 @@
  }
 
 .open .line:nth-child(1){
-    transform: rotate(135deg) translateY(12px);
+    transform: rotate(45deg) translateY(12px);
     transition: all 0.5s;
 }
 
@@ -39,7 +39,7 @@
 }
 
 .open .line:nth-child(3){
-    transform: rotate(-135deg) translateY(-12px);
+    transform: rotate(-45deg) translateY(-12px);
     transition: all 0.5s;
 }
 
@@ -95,6 +95,33 @@
     z-index: 2;
 }
 
+#sendEmail{
+    position: absolute;
+    left: 33%;
+    color: #dddddd;
+    border: solid 1px #f05454;
+    padding: 5px 8px;
+    text-decoration: none;
+    margin-top: 50px;
+    transform: translate(-50%, -50%);
+}
+
+#sendDM{
+    position: absolute;
+    left: 66%;
+    color: #dddddd;
+    border: solid 1px #f05454;
+    padding: 5px 8px;
+    text-decoration: none;
+    margin-top: 50px;
+    transform: translate(-50%, -50%);
+}
+
+.container a:hover{
+    background-color: #f05454;
+    transition: all 2s;
+}
+
 h1{
     font-size: 3rem;
     text-align: center;
@@ -141,14 +168,31 @@ img{
 
 .container span{
     color: #f05454;
+    
 }
 
-.container span:hover{
+.container .btn-back{
+    position: absolute;
+    left: 33%;
     color: #dddddd;
-    transition: all 0.3s;
+    border: solid 1px #f05454;
+    padding: 5px 8px;
+    text-decoration: none;
+    margin-top: 50px;
+    transform: translate(-50%, -50%);
 }
 
 
+.container .btn-contact{
+    position: absolute;
+    left: 66%;
+    color: #dddddd;
+    border: solid 1px #f05454;
+    padding: 5px 8px;
+    text-decoration: none;
+    margin-top: 50px;
+    transform: translate(-50%, -50%);
+}
 
 @media only screen and (max-width: 800px) {
     .container{
