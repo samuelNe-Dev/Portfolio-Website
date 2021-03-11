@@ -95,6 +95,14 @@
     z-index: 2;
 }
 
+#services{
+    top: 40vh;
+}
+
+#contact{
+    top: 40vh;
+}
+
 #sendEmail{
     position: absolute;
     left: 33%;
