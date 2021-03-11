@@ -161,10 +161,11 @@ img{
 .social-icons a{
     font-size: 3rem;
     margin-right: 20px;
-    padding-top: 25px;
+    margin-top: 25px;
 }
 
 .social-icons a:hover{
+    background-color: #222831;
     color: #f05454;
     transition: all 0.3s;
 }
